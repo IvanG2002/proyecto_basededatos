@@ -1,0 +1,48 @@
++----------------+
+|     Users      |
++----------------+
+| user_id (PK)   |
+| username       |
+| password       |
+| role           |
++----------------+
+
+    |
+    |
+    |
+    |
++---v---+
+| Groups |
++-------+
+| group_id (PK) |
+| group_name    |
+| teacher_id (FK) |
++----------------+
+
+    |
+    |
+    |
+    |
++---v---+
+| Assignments |
++------------+
+| assignment_id (PK) |
+| group_id (FK)      |
+| title              |
+| description        |
+| due_date           |
++-------------------+
+
+    |
+    |
+    |
+    |
++---v---+
+| Grades |
++-------+
+| grade_id (PK)     |
+| assignment_id (FK) |
+| student_id (FK)   |
+| score             |
+| comments          |
++-------------------+
